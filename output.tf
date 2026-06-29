@@ -21,15 +21,15 @@ output "subnet_names" {
 output "nsg_name" {
   value = module.network.nsg_name
 }
-output "nic_private_ips" {
-  value = module.compute.nic_private_ips
-}
+# output "nic_private_ips" {
+#   value = module.compute.nic_private_ips
+# }
 
-output "nic_ids" {
-  value = module.compute.nic_ids
-}
+# output "nic_ids" {
+#   value = module.compute.nic_ids
+# }
 
-output "appgw_public_ip" {
-  value = module.appgw.appgw_public_ip
-}
+# output "appgw_public_ip" {
+#   value = module.appgw.appgw_public_ip
+# }
 
