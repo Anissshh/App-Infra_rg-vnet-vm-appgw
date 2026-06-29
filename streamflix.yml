@@ -1,0 +1,14 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:
+  - nginx
+  - git
+
+runcmd:
+  - systemctl enable nginx
+  - systemctl start nginx
+  - rm -rf /var/www/html/*
+  - git clone https://github.com/devopsinsiders/StreamFlix.git /var/www/html
+  - systemctl restart nginx
